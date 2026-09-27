@@ -1,0 +1,25 @@
+{
+  "name": "manavsharma2707",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Profile README pipeline: fetches GitHub metrics and renders them into animated SVG panels.",
+  "type": "module",
+  "scripts": {
+    "fetch-metrics": "tsx scripts/fetch-metrics.ts",
+    "render-svgs": "tsx scripts/render-svgs.ts",
+    "preview": "tsx scripts/preview.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --import tsx"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

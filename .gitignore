@@ -1,0 +1,20 @@
+# planning and context, kept local only
+context/
+CLAUDE.md
+
+# the dashboard lives in its own repo, nested here for convenience
+ManavSharma2707.github.io/
+
+# node
+node_modules/
+dist/
+.env
+.env.local
+
+# editor and OS noise
+.vscode/
+.DS_Store
+Thumbs.db
+
+# generated preview output
+preview/
