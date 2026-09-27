@@ -18,7 +18,7 @@ export function formatPercent(value: number, digits = 0): string {
 }
 
 export function formatDelta(value: number): string {
-  if (value === 0) return "±0";
+  if (value === 0) return "+0";
   return value > 0 ? `+${value}` : String(value);
 }
 

@@ -18,3 +18,6 @@ Thumbs.db
 
 # generated preview output
 preview/
+
+# cached font subsets, re-fetched on demand
+.font-cache/
