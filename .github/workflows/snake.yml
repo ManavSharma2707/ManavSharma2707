@@ -1,0 +1,31 @@
+name: Generate snake
+
+on:
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate the snake SVGs
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            assets/generated/snake.svg?color_snake=%23E8CD7E&color_dots_0=%231A1F26&color_dots_1=%23134A52&color_dots_2=%231C7E88&color_dots_3=%2335D6E8&color_dots_4=%23E8CD7E
+            assets/generated/snake-dark.svg?color_snake=%23E8CD7E&color_dots_0=%231A1F26&color_dots_1=%23134A52&color_dots_2=%231C7E88&color_dots_3=%2335D6E8&color_dots_4=%23E8CD7E
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/generated/snake.svg assets/generated/snake-dark.svg
+          git diff --cached --quiet || git commit -m "chore: refresh contribution snake"
+          git push
