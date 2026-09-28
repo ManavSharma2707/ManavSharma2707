@@ -28,16 +28,24 @@ async function graphql<T>(query: string, variables: Record<string, unknown> = {}
 }
 
 async function rest<T>(path: string): Promise<T> {
-  const response = await fetch(`${REST_ENDPOINT}${path}`, {
-    headers: {
-      Authorization: `Bearer ${token()}`,
-      Accept: "application/vnd.github+json",
-    },
-  });
-  if (!response.ok) {
-    throw new Error(`REST request failed: ${response.status} ${path}`);
+  // stats endpoints answer 202 with an empty body while GitHub computes them
+  for (let attempt = 0; attempt < 5; attempt++) {
+    const response = await fetch(`${REST_ENDPOINT}${path}`, {
+      headers: {
+        Authorization: `Bearer ${token()}`,
+        Accept: "application/vnd.github+json",
+      },
+    });
+    if (response.status === 202) {
+      await new Promise((resolve) => setTimeout(resolve, 3000));
+      continue;
+    }
+    if (!response.ok) {
+      throw new Error(`REST request failed: ${response.status} ${path}`);
+    }
+    return (await response.json()) as T;
   }
-  return (await response.json()) as T;
+  throw new Error(`REST request still computing after retries: ${path}`);
 }
 
 const VIEWER_QUERY = `
@@ -54,6 +62,7 @@ query {
         name
         stargazerCount
         forkCount
+        pushedAt
         languages(first: 10, orderBy: { field: SIZE, direction: DESC }) {
           edges { size node { name color } }
         }
@@ -88,6 +97,7 @@ export interface ViewerData {
         name: string;
         stargazerCount: number;
         forkCount: number;
+        pushedAt: string;
         languages: { edges: Array<{ size: number; node: { name: string; color: string | null } }> };
       }>;
     };

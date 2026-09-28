@@ -142,9 +142,11 @@ async function main() {
     }),
   );
 
-  const topReposByStars = [...viewer.repositories.nodes].sort((a, b) => b.stargazerCount - a.stargazerCount).slice(0, 5);
+  const recentlyActive = [...viewer.repositories.nodes]
+    .sort((a, b) => b.pushedAt.localeCompare(a.pushedAt))
+    .slice(0, 8);
   const weeklyRhythm: number[][] = Array.from({ length: 7 }, () => Array(24).fill(0));
-  for (const repo of topReposByStars) {
+  for (const repo of recentlyActive) {
     try {
       const punchCard = await fetchPunchCard(viewer.login, repo.name);
       for (const entry of punchCard) {
