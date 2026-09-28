@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T14:16:41.419Z",
+  "generatedAt": "2026-09-28T14:25:04.428Z",
   "profile": {
     "login": "ManavSharma2707",
     "name": "Manav Sharma",
@@ -176,7 +176,7 @@
     {
       "date": "2025-10-27",
       "count": 8,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2025-10-28",
@@ -1771,7 +1771,7 @@
     {
       "date": "2026-09-11",
       "count": 13,
-      "level": 1
+      "level": 3
     },
     {
       "date": "2026-09-12",
@@ -1781,12 +1781,12 @@
     {
       "date": "2026-09-13",
       "count": 11,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-09-14",
       "count": 51,
-      "level": 2
+      "level": 4
     },
     {
       "date": "2026-09-15",
@@ -1796,27 +1796,27 @@
     {
       "date": "2026-09-16",
       "count": 21,
-      "level": 1
+      "level": 4
     },
     {
       "date": "2026-09-17",
       "count": 20,
-      "level": 1
+      "level": 4
     },
     {
       "date": "2026-09-18",
       "count": 23,
-      "level": 1
+      "level": 4
     },
     {
       "date": "2026-09-19",
       "count": 9,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-09-20",
       "count": 8,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-09-21",
@@ -1831,12 +1831,12 @@
     {
       "date": "2026-09-23",
       "count": 12,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-09-24",
       "count": 11,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-09-25",
@@ -1846,12 +1846,12 @@
     {
       "date": "2026-09-26",
       "count": 24,
-      "level": 1
+      "level": 4
     },
     {
       "date": "2026-09-27",
       "count": 54,
-      "level": 2
+      "level": 4
     },
     {
       "date": "2026-09-28",
@@ -1916,42 +1916,42 @@
   "languages": [
     {
       "name": "Python",
-      "percent": 51.01557156176344,
+      "percent": 51.01244619405564,
       "color": "#3572A5"
     },
     {
       "name": "Jupyter Notebook",
-      "percent": 44.65952559371583,
+      "percent": 44.65678961654526,
       "color": "#DA5B0B"
     },
     {
       "name": "JavaScript",
-      "percent": 1.8713775456115203,
+      "percent": 1.8712628993815341,
       "color": "#f1e05a"
     },
     {
       "name": "TeX",
-      "percent": 0.8709638360875241,
+      "percent": 0.8709104782172772,
       "color": "#3D6117"
     },
     {
       "name": "TypeScript",
-      "percent": 0.47768110638161915,
+      "percent": 0.4736084832303162,
       "color": "#3178c6"
     },
     {
       "name": "C++",
-      "percent": 0.3792004496163883,
+      "percent": 0.3791772186536895,
       "color": "#f34b7d"
     },
     {
       "name": "HTML",
-      "percent": 0.301940785986375,
+      "percent": 0.30192228818358063,
       "color": "#e34c26"
     },
     {
       "name": "CSS",
-      "percent": 0.1960990404988767,
+      "percent": 0.20625668731184882,
       "color": "#663399"
     }
   ],
@@ -1997,12 +1997,12 @@
       0,
       3,
       3,
-      3,
+      4,
       0,
       0,
       1,
       2,
-      6,
+      9,
       5,
       5,
       5,
