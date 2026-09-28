@@ -13,8 +13,11 @@ export interface CalendarDay {
 export function heatmap(days: CalendarDay[], width: number, height: number, theme: Theme, id: string): string {
   const p = palette(theme);
   const scale = p.heatmapScale;
-  const weeks: CalendarDay[][] = [];
-  for (let i = 0; i < days.length; i += 7) weeks.push(days.slice(i, i + 7));
+  // pad the first column so each row is always the same weekday (Sun at top), like GitHub's graph
+  const leading = days[0] ? new Date(`${days[0].date}T00:00:00Z`).getUTCDay() : 0;
+  const padded: Array<CalendarDay | null> = [...Array<null>(leading).fill(null), ...days];
+  const weeks: Array<Array<CalendarDay | null>> = [];
+  for (let i = 0; i < padded.length; i += 7) weeks.push(padded.slice(i, i + 7));
 
   const cell = Math.min((width - 24) / weeks.length - 2, (height - 24) / 7 - 2);
   const gap = 2;
@@ -27,6 +30,7 @@ export function heatmap(days: CalendarDay[], width: number, height: number, them
     .map((week, wi) =>
       week
         .map((day, di) => {
+          if (!day) return "";
           const x = offsetX + wi * cellStep;
           const y = offsetY + di * cellStep;
           const color = scale[day.level] ?? scale[0];

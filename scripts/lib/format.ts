@@ -27,12 +27,3 @@ export function formatMonthLabel(isoMonth: string): string {
   const date = new Date(Number(year), Number(month) - 1, 1);
   return date.toLocaleDateString("en-US", { month: "short" });
 }
-
-export function levelForCount(count: number, max: number): 0 | 1 | 2 | 3 | 4 {
-  if (count === 0 || max === 0) return 0;
-  const ratio = count / max;
-  if (ratio > 0.75) return 4;
-  if (ratio > 0.5) return 3;
-  if (ratio > 0.25) return 2;
-  return 1;
-}

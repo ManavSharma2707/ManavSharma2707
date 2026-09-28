@@ -75,7 +75,7 @@ query {
       contributionCalendar {
         totalContributions
         weeks {
-          contributionDays { date contributionCount weekday }
+          contributionDays { date contributionCount contributionLevel weekday }
         }
       }
     }
@@ -83,6 +83,8 @@ query {
     mergedPrs: pullRequests(states: MERGED, first: 1) { totalCount }
   }
 }`;
+
+export type ContributionLevel = "NONE" | "FIRST_QUARTILE" | "SECOND_QUARTILE" | "THIRD_QUARTILE" | "FOURTH_QUARTILE";
 
 export interface ViewerData {
   viewer: {
@@ -107,7 +109,14 @@ export interface ViewerData {
       totalPullRequestReviewContributions: number;
       contributionCalendar: {
         totalContributions: number;
-        weeks: Array<{ contributionDays: Array<{ date: string; contributionCount: number; weekday: number }> }>;
+        weeks: Array<{
+          contributionDays: Array<{
+            date: string;
+            contributionCount: number;
+            contributionLevel: ContributionLevel;
+            weekday: number;
+          }>;
+        }>;
       };
     };
     pullRequests: { totalCount: number };

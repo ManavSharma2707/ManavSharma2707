@@ -1,6 +1,19 @@
 import { writeFile, readFile, appendFile, access } from "node:fs/promises";
-import { fetchViewerData, fetchFeaturedRepo, fetchPunchCard, type FeaturedRepoRef } from "./lib/github.js";
-import { levelForCount } from "./lib/format.js";
+import {
+  fetchViewerData,
+  fetchFeaturedRepo,
+  fetchPunchCard,
+  type ContributionLevel,
+  type FeaturedRepoRef,
+} from "./lib/github.js";
+
+const LEVELS: Record<ContributionLevel, 0 | 1 | 2 | 3 | 4> = {
+  NONE: 0,
+  FIRST_QUARTILE: 1,
+  SECOND_QUARTILE: 2,
+  THIRD_QUARTILE: 3,
+  FOURTH_QUARTILE: 4,
+};
 import { MetricsSchema, type Metrics } from "./lib/schema.js";
 
 const METRICS_PATH = "assets/generated/metrics.json";
@@ -92,11 +105,12 @@ async function main() {
   const calendarDays = viewer.contributionsCollection.contributionCalendar.weeks.flatMap(
     (w) => w.contributionDays,
   );
-  const maxDayCount = Math.max(1, ...calendarDays.map((d) => d.contributionCount));
+  // GitHub's own quartile levels, so the heatmap shades exactly like the profile graph;
+  // scaling against the busiest day let one outlier flatten every normal day to the lowest shade
   const calendar = calendarDays.map((d) => ({
     date: d.date,
     count: d.contributionCount,
-    level: levelForCount(d.contributionCount, maxDayCount),
+    level: LEVELS[d.contributionLevel],
   }));
 
   const monthlyMap = new Map<string, number>();
