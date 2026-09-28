@@ -136,7 +136,7 @@ Full-stack developer working across the stack from React front ends to FastAPI a
 <summary><strong>More about me</strong></summary>
 <br>
 
-I work across the stack, from data pipelines and model training to the interfaces people actually use. Most of my recent time goes toward two things: shipping full-stack products end to end, and researching how language model agents behave and fail under realistic conditions. This profile and its <a href="https://manavsharma2707.github.io">companion dashboard</a> are themselves a small full-stack project: a metrics pipeline, a generated SVG renderer, and a React application, all reading from one shared data source.
+I work across the stack, from data pipelines and model training to the interfaces people actually use. Most of my recent time goes toward two things: shipping full-stack products end to end, and researching how language model agents behave and fail under realistic conditions.
 
 </details>
 

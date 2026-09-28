@@ -19,13 +19,15 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            assets/generated/snake.svg?color_snake=%23E8CD7E&color_dots_0=%231A1F26&color_dots_1=%23134A52&color_dots_2=%231C7E88&color_dots_3=%2335D6E8&color_dots_4=%23E8CD7E
-            assets/generated/snake-dark.svg?color_snake=%23E8CD7E&color_dots_0=%231A1F26&color_dots_1=%23134A52&color_dots_2=%231C7E88&color_dots_3=%2335D6E8&color_dots_4=%23E8CD7E
+            assets/generated/snake.svg?color_snake=#C9A54A&color_dots=#E9E7E1,#BFE3E6,#6FC4CC,#0E7C86,#C9A54A
+            assets/generated/snake-dark.svg?color_snake=#E8CD7E&color_dots=#1A1F26,#134A52,#1C7E88,#35D6E8,#E8CD7E
 
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add assets/generated/snake.svg assets/generated/snake-dark.svg
-          git diff --cached --quiet || git commit -m "chore: refresh contribution snake"
+          git diff --cached --quiet && exit 0
+          git commit -m "chore: refresh contribution snake"
+          git pull --rebase origin main
           git push
