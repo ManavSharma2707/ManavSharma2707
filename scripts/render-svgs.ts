@@ -1,6 +1,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { MetricsSchema } from "./lib/schema.js";
 import { buildFontStyleBlock } from "./lib/font-style.js";
+import { fetchAvatarDataUri } from "./lib/avatar.js";
 import { PANELS, renderProject } from "./lib/panels.js";
 import type { Theme } from "./lib/svg.js";
 
@@ -23,17 +24,22 @@ async function main() {
 
   await mkdir(OUT_DIR, { recursive: true });
   const fontStyle = await buildFontStyleBlock();
+  const avatarDataUri = await fetchAvatarDataUri(metrics.profile.avatarUrl);
+  // SVGs embedded via <img> can't fetch external resources, so the header
+  // needs a base64 avatar; metrics.json itself keeps the real URL for the
+  // dashboard, which renders in a normal (unrestricted) HTML <img> context.
+  const renderMetrics = { ...metrics, profile: { ...metrics.profile, avatarUrl: avatarDataUri } };
   const themes: Theme[] = ["dark", "light"];
 
   for (const [name, renderer] of PANELS) {
     for (const theme of themes) {
-      await writeSized(`${OUT_DIR}/${name}-${theme}.svg`, renderer(metrics, theme, fontStyle));
+      await writeSized(`${OUT_DIR}/${name}-${theme}.svg`, renderer(renderMetrics, theme, fontStyle));
     }
   }
 
   for (let i = 0; i < metrics.projects.length; i++) {
     for (const theme of themes) {
-      await writeSized(`${OUT_DIR}/project-${i}-${theme}.svg`, renderProject(metrics, i, theme, fontStyle));
+      await writeSized(`${OUT_DIR}/project-${i}-${theme}.svg`, renderProject(renderMetrics, i, theme, fontStyle));
     }
   }
 

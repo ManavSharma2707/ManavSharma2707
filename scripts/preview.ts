@@ -1,6 +1,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { MetricsSchema } from "./lib/schema.js";
 import { buildFontStyleBlock } from "./lib/font-style.js";
+import { fetchAvatarDataUri } from "./lib/avatar.js";
 import { PANELS, renderProject } from "./lib/panels.js";
 import type { Theme } from "./lib/svg.js";
 
@@ -12,6 +13,8 @@ async function main() {
 
   await mkdir(OUT_DIR, { recursive: true });
   const fontStyle = await buildFontStyleBlock();
+  const avatarDataUri = await fetchAvatarDataUri(metrics.profile.avatarUrl);
+  const renderMetrics = { ...metrics, profile: { ...metrics.profile, avatarUrl: avatarDataUri } };
   const themes: Theme[] = ["dark", "light"];
 
   const files: string[] = [];
@@ -19,7 +22,7 @@ async function main() {
   for (const [name, renderer] of PANELS) {
     for (const theme of themes) {
       const filename = `${name}-${theme}.svg`;
-      await writeFile(`${OUT_DIR}/${filename}`, renderer(metrics, theme, fontStyle), "utf8");
+      await writeFile(`${OUT_DIR}/${filename}`, renderer(renderMetrics, theme, fontStyle), "utf8");
       files.push(filename);
     }
   }
@@ -27,7 +30,7 @@ async function main() {
   for (let i = 0; i < metrics.projects.length; i++) {
     for (const theme of themes) {
       const filename = `project-${i}-${theme}.svg`;
-      await writeFile(`${OUT_DIR}/${filename}`, renderProject(metrics, i, theme, fontStyle), "utf8");
+      await writeFile(`${OUT_DIR}/${filename}`, renderProject(renderMetrics, i, theme, fontStyle), "utf8");
       files.push(filename);
     }
   }

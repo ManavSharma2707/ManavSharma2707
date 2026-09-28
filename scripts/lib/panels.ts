@@ -42,9 +42,13 @@ export function renderHeader(metrics: Metrics, theme: Theme, fontStyle: string):
     ${outerFrame(WIDTH, height, theme)}
     ${networkCluster(90, height - 28, 0.6, theme, "hdr-net-a")}
     ${networkCluster(430, height - 28, 0.6, theme, "hdr-net-b")}
-    <clipPath id="avatar-clip"><circle cx="70" cy="${cy}" r="34"/></clipPath>
+    <defs>
+      <pattern id="avatar-pattern" patternUnits="userSpaceOnUse" x="36" y="${cy - 34}" width="68" height="68">
+        <image href="${metrics.profile.avatarUrl}" x="0" y="0" width="68" height="68" preserveAspectRatio="xMidYMid slice"/>
+      </pattern>
+    </defs>
     <circle cx="70" cy="${cy}" r="37" fill="none" stroke="${p.gold}" stroke-width="2"/>
-    <image href="${metrics.profile.avatarUrl}" x="36" y="${cy - 34}" width="68" height="68" clip-path="url(#avatar-clip)"/>
+    <circle cx="70" cy="${cy}" r="34" fill="url(#avatar-pattern)"/>
     <text x="122" y="${cy - 6}" font-family="Rajdhani" font-weight="700" font-size="26" letter-spacing="1" fill="${p.textPrimary}">${escapeXml(metrics.profile.name.toUpperCase())}</text>
     <text x="122" y="${cy + 18}" font-family="Inter" font-size="13" fill="${p.textMuted}">${escapeXml(metrics.profile.title)}</text>
     <text x="122" y="${cy + 38}" font-family="JetBrains Mono" font-size="11" fill="${p.cyan}">@${escapeXml(metrics.profile.login)}</text>
