@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T13:48:16.015Z",
+  "generatedAt": "2026-09-28T13:52:06.563Z",
   "profile": {
     "login": "ManavSharma2707",
     "name": "Manav Sharma",
@@ -9,14 +9,14 @@
     "followers": 1
   },
   "totals": {
-    "repositories": 22,
+    "repositories": 16,
     "stars": 1,
     "forks": 1,
-    "commitsThisYear": 486,
+    "commitsThisYear": 437,
     "pullRequests": 0,
     "issues": 0,
     "reviews": 0,
-    "contributionsThisYear": 503
+    "contributionsThisYear": 448
   },
   "streak": {
     "current": 7,
@@ -980,8 +980,8 @@
     },
     {
       "date": "2026-04-06",
-      "count": 4,
-      "level": 1
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-04-07",
@@ -990,18 +990,18 @@
     },
     {
       "date": "2026-04-08",
-      "count": 1,
-      "level": 1
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-04-09",
-      "count": 1,
-      "level": 1
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-04-10",
-      "count": 1,
-      "level": 1
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-04-11",
@@ -1010,13 +1010,13 @@
     },
     {
       "date": "2026-04-12",
-      "count": 1,
-      "level": 1
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-04-13",
-      "count": 1,
-      "level": 1
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-04-14",
@@ -1030,13 +1030,13 @@
     },
     {
       "date": "2026-04-16",
-      "count": 2,
+      "count": 1,
       "level": 1
     },
     {
       "date": "2026-04-17",
-      "count": 1,
-      "level": 1
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-04-18",
@@ -1045,8 +1045,8 @@
     },
     {
       "date": "2026-04-19",
-      "count": 1,
-      "level": 1
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-04-20",
@@ -1295,7 +1295,7 @@
     },
     {
       "date": "2026-06-08",
-      "count": 6,
+      "count": 4,
       "level": 1
     },
     {
@@ -1390,8 +1390,8 @@
     },
     {
       "date": "2026-06-27",
-      "count": 2,
-      "level": 1
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-06-28",
@@ -1450,13 +1450,13 @@
     },
     {
       "date": "2026-07-09",
-      "count": 2,
-      "level": 1
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-07-10",
-      "count": 1,
-      "level": 1
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-07-11",
@@ -1465,8 +1465,8 @@
     },
     {
       "date": "2026-07-12",
-      "count": 3,
-      "level": 1
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-07-13",
@@ -1555,8 +1555,8 @@
     },
     {
       "date": "2026-07-30",
-      "count": 1,
-      "level": 1
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-07-31",
@@ -1595,18 +1595,18 @@
     },
     {
       "date": "2026-08-07",
-      "count": 14,
-      "level": 1
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-08-08",
-      "count": 8,
-      "level": 1
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-08-09",
-      "count": 1,
-      "level": 1
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-08-10",
@@ -1645,18 +1645,18 @@
     },
     {
       "date": "2026-08-17",
-      "count": 2,
-      "level": 1
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-08-18",
-      "count": 2,
-      "level": 1
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-08-19",
-      "count": 4,
-      "level": 1
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-08-20",
@@ -1855,7 +1855,7 @@
     },
     {
       "date": "2026-09-28",
-      "count": 6,
+      "count": 5,
       "level": 1
     }
   ],
@@ -1890,7 +1890,7 @@
     },
     {
       "month": "2026-04",
-      "count": 27
+      "count": 15
     },
     {
       "month": "2026-05",
@@ -1898,61 +1898,61 @@
     },
     {
       "month": "2026-06",
-      "count": 8
+      "count": 4
     },
     {
       "month": "2026-07",
-      "count": 10
+      "count": 3
     },
     {
       "month": "2026-08",
-      "count": 33
+      "count": 2
     },
     {
       "month": "2026-09",
-      "count": 398
+      "count": 397
     }
   ],
   "languages": [
     {
-      "name": "Jupyter Notebook",
-      "percent": 47.05093665519911,
-      "color": "#DA5B0B"
-    },
-    {
       "name": "Python",
-      "percent": 42.54535729514678,
+      "percent": 51.016497670186745,
       "color": "#3572A5"
     },
     {
-      "name": "Dart",
-      "percent": 3.3739458747842073,
-      "color": "#00B4AB"
-    },
-    {
-      "name": "HTML",
-      "percent": 2.3607735012481834,
-      "color": "#e34c26"
+      "name": "Jupyter Notebook",
+      "percent": 44.6603363180019,
+      "color": "#DA5B0B"
     },
     {
       "name": "JavaScript",
-      "percent": 1.8678490256715974,
+      "percent": 1.8714115175627328,
       "color": "#f1e05a"
     },
     {
-      "name": "TypeScript",
-      "percent": 1.133031119722129,
-      "color": "#3178c6"
-    },
-    {
       "name": "TeX",
-      "percent": 0.8363914866839715,
+      "percent": 0.8709796470824871,
       "color": "#3D6117"
     },
     {
+      "name": "TypeScript",
+      "percent": 0.47587443334018326,
+      "color": "#3178c6"
+    },
+    {
       "name": "C++",
-      "percent": 0.35884430203145506,
+      "percent": 0.37920733341127216,
       "color": "#f34b7d"
+    },
+    {
+      "name": "HTML",
+      "percent": 0.3019462672521274,
+      "color": "#e34c26"
+    },
+    {
+      "name": "CSS",
+      "percent": 0.19610260037221824,
+      "color": "#663399"
     }
   ],
   "weeklyRhythm": [
