@@ -12,12 +12,12 @@
     <g transform="translate(127,26)">
     <style>
       #streak-progress{stroke-dasharray:282.7;stroke-dashoffset:282.7;animation:streak-fill 1s ease-out 0.2s forwards;}
-      @keyframes streak-fill{to{stroke-dashoffset:35.3;}}
-      @media (prefers-reduced-motion: reduce){#streak-progress{stroke-dashoffset:35.3;animation:none;}}
+      @keyframes streak-fill{to{stroke-dashoffset:282.7;}}
+      @media (prefers-reduced-motion: reduce){#streak-progress{stroke-dashoffset:282.7;animation:none;}}
     </style>
     <circle cx="75" cy="63" r="45" fill="none" stroke="#2A2F37" stroke-width="7.5" opacity="0.4"/>
     <circle id="streak-progress" cx="75" cy="63" r="45" fill="none" stroke="#35D6E8" stroke-width="7.5" stroke-linecap="round" transform="rotate(-90 75 63)"/>
-    <text x="75" y="61" font-family="JetBrains Mono" font-size="30" font-weight="600" fill="#E8CD7E" text-anchor="middle">7</text>
+    <text x="75" y="61" font-family="JetBrains Mono" font-size="30" font-weight="600" fill="#E8CD7E" text-anchor="middle">0</text>
     <text x="75" y="81" font-family="Rajdhani" font-size="11" letter-spacing="1" fill="#8B929C" text-anchor="middle">DAY STREAK</text>
     <text x="75" y="132" font-family="Inter" font-size="10" fill="#8B929C" text-anchor="middle">Longest: 8</text>
   </g>

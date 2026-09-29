@@ -11,7 +11,7 @@
   
     <g transform="translate(0,26)">
     <style>
-      #activity-line{stroke-dasharray:509.77612000423227;stroke-dashoffset:509.77612000423227;animation:activity-draw 1.2s ease-out forwards;}
+      #activity-line{stroke-dasharray:509.7659331535864;stroke-dashoffset:509.7659331535864;animation:activity-draw 1.2s ease-out forwards;}
       #activity-area{opacity:0;animation:activity-fade 0.8s ease-out 0.6s forwards;}
       @keyframes activity-draw{to{stroke-dashoffset:0;}}
       @keyframes activity-fade{to{opacity:1;}}
