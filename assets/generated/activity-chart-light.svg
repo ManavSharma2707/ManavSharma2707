@@ -11,7 +11,7 @@
   
     <g transform="translate(0,26)">
     <style>
-      #activity-line{stroke-dasharray:509.7659331535864;stroke-dashoffset:509.7659331535864;animation:activity-draw 1.2s ease-out forwards;}
+      #activity-line{stroke-dasharray:638.3875818434792;stroke-dashoffset:638.3875818434792;animation:activity-draw 1.2s ease-out forwards;}
       #activity-area{opacity:0;animation:activity-fade 0.8s ease-out 0.6s forwards;}
       @keyframes activity-draw{to{stroke-dashoffset:0;}}
       @keyframes activity-fade{to{opacity:1;}}
@@ -21,8 +21,8 @@
       }
     </style>
     <line x1="12" y1="52" x2="392" y2="52" stroke="#D8D6D0" stroke-width="1" opacity="0.4"/><line x1="12" y1="92" x2="392" y2="92" stroke="#D8D6D0" stroke-width="1" opacity="0.4"/><line x1="12" y1="132" x2="392" y2="132" stroke="#D8D6D0" stroke-width="1" opacity="0.4"/>
-    <path id="activity-area" d="M12.0,166.0 L46.5,172.0 L81.1,170.0 L115.6,171.2 L150.2,171.6 L184.7,172.0 L219.3,166.0 L253.8,170.4 L288.4,170.4 L322.9,170.8 L357.5,171.2 L392.0,12.0 L392.0,172 L12.0,172 Z" fill="#0B6169" opacity="0.28"/>
-    <path id="activity-line" d="M12.0,166.0 L46.5,172.0 L81.1,170.0 L115.6,171.2 L150.2,171.6 L184.7,172.0 L219.3,166.0 L253.8,170.4 L288.4,170.4 L322.9,170.8 L357.5,171.2 L392.0,12.0" fill="none" stroke="#0E7C86" stroke-width="2"/>
-    <text x="12" y="188" font-family="JetBrains Mono" font-size="9" fill="#5B6169" text-anchor="middle">Oct</text><text x="81.0909090909091" y="188" font-family="JetBrains Mono" font-size="9" fill="#5B6169" text-anchor="middle">Dec</text><text x="150.1818181818182" y="188" font-family="JetBrains Mono" font-size="9" fill="#5B6169" text-anchor="middle">Feb</text><text x="219.27272727272728" y="188" font-family="JetBrains Mono" font-size="9" fill="#5B6169" text-anchor="middle">Apr</text><text x="288.3636363636364" y="188" font-family="JetBrains Mono" font-size="9" fill="#5B6169" text-anchor="middle">Jun</text><text x="357.4545454545455" y="188" font-family="JetBrains Mono" font-size="9" fill="#5B6169" text-anchor="middle">Aug</text>
+    <path id="activity-area" d="M12.0,172.0 L46.5,170.0 L81.1,171.2 L115.6,171.6 L150.2,172.0 L184.7,166.0 L219.3,170.4 L253.8,170.4 L288.4,170.8 L322.9,171.2 L357.5,12.0 L392.0,172.0 L392.0,172 L12.0,172 Z" fill="#0B6169" opacity="0.28"/>
+    <path id="activity-line" d="M12.0,172.0 L46.5,170.0 L81.1,171.2 L115.6,171.6 L150.2,172.0 L184.7,166.0 L219.3,170.4 L253.8,170.4 L288.4,170.8 L322.9,171.2 L357.5,12.0 L392.0,172.0" fill="none" stroke="#0E7C86" stroke-width="2"/>
+    <text x="12" y="188" font-family="JetBrains Mono" font-size="9" fill="#5B6169" text-anchor="middle">Nov</text><text x="81.0909090909091" y="188" font-family="JetBrains Mono" font-size="9" fill="#5B6169" text-anchor="middle">Jan</text><text x="150.1818181818182" y="188" font-family="JetBrains Mono" font-size="9" fill="#5B6169" text-anchor="middle">Mar</text><text x="219.27272727272728" y="188" font-family="JetBrains Mono" font-size="9" fill="#5B6169" text-anchor="middle">May</text><text x="288.3636363636364" y="188" font-family="JetBrains Mono" font-size="9" fill="#5B6169" text-anchor="middle">Jul</text><text x="357.4545454545455" y="188" font-family="JetBrains Mono" font-size="9" fill="#5B6169" text-anchor="middle">Sep</text>
   </g>
   </svg>
